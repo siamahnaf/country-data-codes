@@ -1,0 +1,36 @@
+{
+  "name": "country-data-codes",
+  "version": "4.0.2",
+  "description": "Easy and Simple Country Data and Code Management solution🤷",
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
+  "homepage": "https://github.com/siamahnaf198/country-data-codes",
+  "keywords": [
+    "country-data-code",
+    "country code",
+    "calling code",
+    "currency-symbol",
+    "currency-code",
+    "country-name",
+    "react",
+    "node"
+  ],
+  "scripts": {
+    "test": "prettier --write src/ && npm run build:esm && npm run build:cjs",
+    "build": "rmdir /s /q dist && prettier --write src/ && npm run build:esm && npm run build:cjs",
+    "build:esm": "tsc",
+    "build:cjs": "tsc --module CommonJs --outDir dist/cjs"
+  },
+  "author": "Siam Ahnaf",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^18.11.10",
+    "typescript": "^4.9.3"
+  },
+  "repository": {
+    "directory": "https://github.com/siamahnaf198/country-data-codes"
+  },
+  "dependencies": {
+    "country-data-codes": "^4.0.2"
+  }
+}
