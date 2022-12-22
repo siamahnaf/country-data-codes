@@ -23,7 +23,7 @@ The data currently provided for each country is:
     
   * `flag` Country flag base64 data
   * `languages` An array of [ISO 639-2](http://en.wikipedia.org/wiki/ISO_639-2) codes for languages.
-  * `countryCallingCodes` An array of the international call prefixes for this country.
+  * `countryCallingCodes` The international call prefixes for this country.
   * `emoji` The emoji of country's flag.
 
 ## Installation
@@ -63,10 +63,16 @@ Returns the country's calling code. It returns an array of string.
 
 Example
 ```bash
-import { getCallingCode } from "country-data-codes";
+import { getCallingCode, GetCallingCodeTypes } from "country-data-codes";
 
-console.log(getCallingCode("BD")) // Give the country code(isoAlpha2 or isoAlpha3)
-//["+88"]
+const dialingCode: GetCallingCodeTypes = getCallingCode("BD")
+
+console.log(dialingCode) // Give the country code(isoAlpha2 or isoAlpha3)
+//{
+  code: "880",
+  format: "+880",
+  flag: "" //Base64 flash data
+}
 ```
 ### getLanguages(countryCode)
 Returns the country's languages. It returns an array of string;
@@ -113,6 +119,17 @@ const data: CountryDataTypes = lookup({currencyCode: "BDT"})
 const data: CountryDataTypes = lookup({currencySymbol: "৳"})
 ```
 
+### removeDialCode()
+You can remove dial code from a phone number and get a string value.
+
+Example
+```bash
+import { removeDialCode } from "country-data-codes";
+
+console.log(removeDialCode({countryCode: "BD", phone: "+8801611994404"})) // Give the country code(isoAlpha2) and phone number
+//1611994404
+```
+
 ## Issues or correction
 If you face any issues to any function or see any wrong information about country, please let me know.
 
@@ -121,7 +138,7 @@ If you face any issues to any function or see any wrong information about countr
 - Author - [Siam Ahnaf](https://www.siamahnaf.com/)
 - Website - [https://www.siamahnaf.com/](https://www.siamahnaf.com/)
 - Twitter - [https://twitter.com/siamahnaf198](https://twitter.com/siamahnaf198)
-- Githup - [https://github.com/siamahnaf198](https://github.com/siamahnaf198)
+- Github - [https://github.com/siamahnaf198](https://github.com/siamahnaf198)
 
 ## License
 
