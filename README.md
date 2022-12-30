@@ -126,8 +126,10 @@ Example
 ```bash
 import { removeDialCode } from "country-data-codes";
 
-console.log(removeDialCode({countryCode: "BD", phone: "+8801611994404"})) // Give the country code(isoAlpha2) and phone number
-//1611994404
+const phone = removeDialCode("+8801611994404")
+
+//undefined or
+//01611994403
 ```
 
 ## Issues or correction
