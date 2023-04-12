@@ -140,7 +140,7 @@ If you face any issues to any function or see any wrong information about countr
 - Author - [Siam Ahnaf](https://www.siamahnaf.com/)
 - Website - [https://www.siamahnaf.com/](https://www.siamahnaf.com/)
 - Twitter - [https://twitter.com/siamahnaf198](https://twitter.com/siamahnaf198)
-- Github - [https://github.com/siamahnaf198](https://github.com/siamahnaf198)
+- Github - [https://github.com/siamahnaf](https://github.com/siamahnaf)
 
 ## License
 
