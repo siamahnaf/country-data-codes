@@ -147,3 +147,4 @@ If you face any issues to any function or see any wrong information about countr
 ## License
 
 country-data-codes [MIT licensed](LICENSE).
+
